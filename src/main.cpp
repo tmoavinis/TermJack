@@ -2,10 +2,10 @@
 #include <fstream>
 #include <string>
 
-#include "card.h"
+//#include "card.h"
+#include "deck.h"
 
-
-//opens the file from the path and exctracts a string from inside it
+// opens the file from the path and exctracts a string from inside it
 std::string getArtFromFile(std::string filepath)
 {
 
@@ -35,9 +35,7 @@ int main()
 
     std::cout << bannerString;
 
-    for(int i = 0; i < 4 ; i++) {
-        
-    }
+    deck _deck = deck(cardArt);
 
     return 0;
 }

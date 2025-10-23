@@ -2,12 +2,12 @@ class card
 {
 
 private:
-    // a = ace, 2 - 10, k = king, q = queen, j = jock
     std::string asciiArt;
-    char type;
+    char type; // a = ace, 2 - 10, k = king, q = queen, j = jock
     int score;
 
 public:
+    card() = default; //so that the compiler can shut up
     card(char cardType, std::string art)
     {
         type = cardType;
@@ -33,5 +33,9 @@ public:
             asciiArt[62] = type;
             break;
         }
+    }
+
+    std::string getAsciiArt(){
+        return asciiArt;
     }
 };
