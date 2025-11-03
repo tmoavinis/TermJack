@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 #include <stack>
 #include "card.h"
 
@@ -10,9 +11,13 @@ private:
     card utilCardArray[4][13];
     // std::string art[4];
 
+    void swap_card(card A, card B){
+
+    }
+
 public:
     deck(std::string cardArt[4])
-    {   
+    {
         for (int i = 0; i < 4; i++)
         {
             // making the ace
@@ -34,7 +39,20 @@ public:
     void shuffleDeck()
     {
         std::cout << "Shuffle Shuffle Shuffle\n";
+
+        srand(time(NULL));
+        // 52 cards, 52 -1 = 51
+        for (int i = 51; i > 0; i--)
+        {
+            // Pick a random index from 0 to i
+            int j = rand() % (i + 1);
+
+            // Swap arr[i] with the element
+            // at random index
+            //swap(&arr[i], &arr[j]);
+        }
     }
+
     card drawCard()
     {
         card drawnCard = cardDeck.top(); // save the card on top
