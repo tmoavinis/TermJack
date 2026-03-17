@@ -11,8 +11,8 @@ private:
     card utilCardArray[4][13];
     // std::string art[4];
 
-    void swap_card(card A, card B){
-
+    void swap_card(card A, card B)
+    {
     }
 
 public:
@@ -30,9 +30,21 @@ public:
             }
             // making the 10 and the figure cards
             utilCardArray[i][9] = card('t', cardArt[i]);
-            utilCardArray[i][10] = card('j', cardArt[i]);
-            utilCardArray[i][11] = card('q', cardArt[i]);
-            utilCardArray[i][12] = card('k', cardArt[i]);
+            utilCardArray[i][10] = card('J', cardArt[i]);
+            utilCardArray[i][11] = card('Q', cardArt[i]);
+            utilCardArray[i][12] = card('K', cardArt[i]);
+        }
+        
+
+        // actually building the deck itself
+        // by pushing the cards onto it
+        // from utilCardArray
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 13; j++)
+            {
+                cardDeck.push(utilCardArray[i][j]);
+            }
         }
     }
 
@@ -49,7 +61,7 @@ public:
 
             // Swap arr[i] with the element
             // at random index
-            //swap(&arr[i], &arr[j]);
+            // swap(&arr[i], &arr[j]);
         }
     }
 

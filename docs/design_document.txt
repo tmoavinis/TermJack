@@ -1,0 +1,19 @@
+card.h :
+> Card type : Ace, Ten, King/Queen/Jack or 2 through 9
+> ASCII art passed through the constructor
+> Score determined by the type
+
+deck.h :
+
+> cardDeck : a stack to hold all the cards, it is constructed when the 
+class constructor is called
+> utilCardArray : [4] [13] array to help with the building of the deck,
+4 "houses" (hearts, clubs, diamonds, spades) and 13 cards in each
+> shuffleDeck() : shuffles cardDeck
+> drawCard() returns the card on top of the stack.
+
+player.h : needs to have a hand (linked list maybe?) to
+hold their cards
+
+need to implement betting, hitting, standing for starters
+then other possible moves (look up new vegas blackjack)

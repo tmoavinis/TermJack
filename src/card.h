@@ -3,7 +3,7 @@ class card
 
 private:
     std::string asciiArt;
-    char type; // a = ace, 2 - 10, k = king, q = queen, j = jock
+    char type; // A = ace, 2 - 10, K = king, Q = queen, J = jack
     int score;
 
 public:
@@ -24,7 +24,7 @@ public:
             asciiArt[61] = '1';
             asciiArt[62] = '0';
             break;
-        case 'k' || 'q' || 'j':
+        case 'K' || 'Q' || 'J':
             score = 10;
             asciiArt[62] = type;
             break;

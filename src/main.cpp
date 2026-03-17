@@ -36,6 +36,9 @@ int main()
     std::cout << bannerString;
 
     deck _deck = deck(cardArt);
+    _deck.shuffleDeck();
+    card a_card = _deck.drawCard();
+    std::cout<<a_card.getAsciiArt();
 
     return 0;
 }
